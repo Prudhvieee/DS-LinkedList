@@ -9,8 +9,8 @@ namespace DS_LinkedList
             ///Creating instance of linked list
             LinkedList linkedList = new LinkedList();
             linkedList.Add(56);
-            linkedList.Add(30);
-            linkedList.Add(70);
+            linkedList.Append(30);
+            linkedList.Append(70);
             Console.WriteLine("\nValues in Linked List:-");
             linkedList.Display();
         }

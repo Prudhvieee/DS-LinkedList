@@ -14,9 +14,9 @@ namespace DS_LinkedList
         internal void Add(int data)
         {
             Node node = new Node(data);
-            if (this.head == null)
+            if (head == null)
             {
-                this.head = node;
+                head = node;
             }
             else
             {
@@ -28,6 +28,26 @@ namespace DS_LinkedList
                 Temp.next = node;
             }
             Console.WriteLine("{0} inserted into the linked list", node.data);
+        }
+        /// <summary>
+        /// Append method is used to append the data
+        /// </summary>
+        /// <param name="item"></param>
+        internal void Append(int item)
+        {
+            Node node = new Node(item);
+            if (head == null)
+                head = node;
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+            Console.WriteLine("{0} appended to the linked list", node.data);
         }
         /// <summary>
         /// display method is used to Display the instance
