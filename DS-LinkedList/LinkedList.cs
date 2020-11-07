@@ -6,12 +6,12 @@ namespace DS_LinkedList
 {
     public class LinkedList
     {
-        internal Node head;
+        public Node head;
         /// <summary>
         /// Add method is used to add data into the linkedlist.
         /// </summary>
         /// <param name="data"></param>
-        internal void Add(int data)
+        public void Add(int data)
         {
             Node node = new Node(data);
             if (head == null)
@@ -33,7 +33,7 @@ namespace DS_LinkedList
         /// Append method is used to append the data
         /// </summary>
         /// <param name="item"></param>
-        internal void Append(int item)
+        public void Append(int item)
         {
             Node node = new Node(item);
             if (head == null)
@@ -52,7 +52,7 @@ namespace DS_LinkedList
         /// <summary>
         /// display method is used to Display the instance
         /// </summary>
-        internal void Display()
+        public void Display()
         {
             Node temp = this.head;
             if (temp == null)
@@ -65,6 +65,38 @@ namespace DS_LinkedList
                 Console.WriteLine(temp.data + " ");
                 temp = temp.next;
             }
+        }
+        public Node InsertAtParticularPosition(int position, int data)
+        {
+            if (position < 1)
+            {
+                Console.WriteLine("Invalid position");
+            }
+            if (position == 1)
+            {
+                var newNode = new Node(data);
+                newNode.next = this.head;
+                head = newNode;
+            }
+            else
+            {
+                while (position-- != 0)
+                {
+                    if (position == 1)
+                    {
+                        Node node = new Node(data);
+                        node.next = this.head.next;
+                        head.next = node;
+                        break;
+                    }
+                    head = head.next;
+                }
+                if (position != 1)
+                {
+                    Console.WriteLine("Position out of range");
+                }
+            }
+            return head;
         }
     }
 }
