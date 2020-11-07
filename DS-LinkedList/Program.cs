@@ -14,13 +14,15 @@ namespace DS_LinkedList
             linkedList.Display();
             Console.WriteLine("--------------------------------");
             //Inserting the element at particular position
-            Console.WriteLine("Inserting the values");
+            Console.WriteLine("\nInserting the values\n");
             linkedList.InsertAtParticularPosition(2, 30);
             linkedList.Display();
-            Console.WriteLine("Deleting element at first position");
+            Console.WriteLine("\nDeleting element at first position\n");
             linkedList.Pop();
             linkedList.Display();
-
+            Console.WriteLine("\nDeleting element at last position\n");
+            linkedList.PopLast();
+            linkedList.Display();
         }
     }
 }

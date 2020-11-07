@@ -98,6 +98,10 @@ namespace DS_LinkedList
             }
             return head;
         }
+        /// <summary>
+        /// Pop method deletes the first element in the linked list
+        /// </summary>
+        /// <returns></returns>
         public Node Pop()
         {
             Node node = head;
@@ -110,6 +114,29 @@ namespace DS_LinkedList
                 head = head.next;
             }
             return node;
+        }
+        /// <summary>
+        /// PopLast method is used to delete the last element
+        /// </summary>
+        /// <returns></returns>
+        public Node PopLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is Empty.");
+                return null;
+            }
+            else
+            {
+                Node newNode = head;
+                while (newNode.next.next != null)
+                {
+                    newNode = newNode.next;
+                }
+                Node removedNode = newNode.next;
+                newNode.next = null;
+                return removedNode;
+            }
         }
     }
 }

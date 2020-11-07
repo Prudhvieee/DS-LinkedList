@@ -66,5 +66,22 @@ namespace DS_LinkedListTest
             ///Assert
             Assert.AreEqual(56, head.data);
         }
+        /// <summary>
+        /// Ability to delete last number should return the remaining.
+        /// </summary>
+        [TestMethod]
+        public void WhenDeleteLastNumber_ShouldReturnRemaining()
+        {
+            ///Arrange
+            LinkedList list = new LinkedList();
+            ///Act
+            list.Add(56);
+            list.Append(30);
+            list.Append(70);
+            Node last = list.PopLast();
+            ///Assert
+            Assert.AreEqual(70, last.data);
+        }
+
     }
 }
