@@ -17,6 +17,9 @@ namespace DS_LinkedList
             Console.WriteLine("Inserting the values");
             linkedList.InsertAtParticularPosition(2, 30);
             linkedList.Display();
+            Console.WriteLine("Deleting element at first position");
+            linkedList.Pop();
+            linkedList.Display();
 
         }
     }

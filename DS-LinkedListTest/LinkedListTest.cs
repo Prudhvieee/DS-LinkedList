@@ -9,7 +9,7 @@ namespace DS_LinkedListTest
         /// Able to add numbers to linkedlist
         /// </summary>
         [TestMethod]
-        public void GivenThreeNumbers_When_Added_ShouldBeAddedToTop()
+        public void GivenThreeNumbersWhen_AddedShouldBeAddedToTop()
         {
             ///Arrange
             LinkedList list = new LinkedList();
@@ -24,7 +24,7 @@ namespace DS_LinkedListTest
         /// Able to append the numbers
         /// </summary>
         [TestMethod]
-        public void GivenThreeNumbers_When_Appended_ShouldBeAddedToLast()
+        public void GivenThreeNumbersWhenAppended_ShouldBeAddedToLast()
         {
             ///Arrange
             LinkedList list = new LinkedList();
@@ -39,7 +39,7 @@ namespace DS_LinkedListTest
         /// able to insert the value at particular position
         /// </summary>
         [TestMethod]
-        public void GivenThreeNumbers_WhenInsertingSecondInBetween_ShouldBeAddedInBetween()
+        public void GivenThreeNumbersWhenInsertingSecondInBetween_ShouldBeAddedInBetween()
         {
             ///Arrange
             LinkedList list = new LinkedList();
@@ -49,6 +49,22 @@ namespace DS_LinkedListTest
             list.InsertAtParticularPosition(2, 30);
             ///Assert
             Assert.AreEqual(30, list.head.next.data);
+        }
+        /// <summary>
+        /// Ability to delete first number should return the remaining.
+        /// </summary>
+        [TestMethod]
+        public void WhenDeleteFirstNumber_ShouldReturnRemaining()
+        {
+            ///Arrange
+            LinkedList list = new LinkedList();
+            ///Act
+            list.Add(56);
+            list.Append(30);
+            list.Append(70);
+            Node head = list.Pop();
+            ///Assert
+            Assert.AreEqual(56, head.data);
         }
     }
 }

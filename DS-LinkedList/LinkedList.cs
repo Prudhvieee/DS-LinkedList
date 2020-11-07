@@ -98,5 +98,18 @@ namespace DS_LinkedList
             }
             return head;
         }
+        public Node Pop()
+        {
+            Node node = head;
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is Empty.");
+            }
+            else
+            {
+                head = head.next;
+            }
+            return node;
+        }
     }
 }
