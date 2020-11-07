@@ -9,10 +9,15 @@ namespace DS_LinkedList
             ///Creating instance of linked list
             LinkedList linkedList = new LinkedList();
             linkedList.Add(56);
-            linkedList.Append(30);
             linkedList.Append(70);
             Console.WriteLine("\nValues in Linked List:-");
             linkedList.Display();
+            Console.WriteLine("--------------------------------");
+            //Inserting the element at particular position
+            Console.WriteLine("Inserting the values");
+            linkedList.InsertAtParticularPosition(2, 30);
+            linkedList.Display();
+
         }
     }
 }
