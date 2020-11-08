@@ -17,15 +17,17 @@ namespace DS_LinkedList
             Console.WriteLine("\nInserting the values\n");
             linkedList.InsertAtParticularPosition(2, 30);
             linkedList.Display();
+            //Deleting element at first position
             Console.WriteLine("\nDeleting element at first position\n");
             linkedList.Pop();
             linkedList.Display();
+            //Deleting element at last position
             Console.WriteLine("\nDeleting element at last position\n");
             linkedList.PopLast();
             linkedList.Display();
+            //Searching the element
             Console.WriteLine("\nEnter the element to be searched\n");
             int data = Convert.ToInt32(Console.ReadLine());
-
             int position = linkedList.Search(data);
             if (position == 0)
             {
@@ -35,6 +37,10 @@ namespace DS_LinkedList
             {
                 Console.WriteLine("Element found at position " + position);
             }
+            //Inserting data after particular position
+            Console.WriteLine("\nInserting data after particular position\n");
+            linkedList.InsertNodeAfterParticularNode(40, 30);
+            linkedList.Display();
         }
     }
 }

@@ -172,5 +172,22 @@ namespace DS_LinkedList
             }
             return 0;
         }
+        public void InsertNodeAfterParticularNode(int data, int dataToSearch)
+        {
+            int position = Search(dataToSearch);
+            if (position == 0)
+            {
+                Console.WriteLine("No such element found");
+                return;
+            }
+            Node node = new Node(data);
+            Node temp = this.head;
+            for (int i = 1; i < position; i++)
+            {
+                temp = temp.next;
+            }
+            node.next = temp.next;
+            temp.next = node;
+        }
     }
 }
