@@ -116,5 +116,21 @@ namespace DS_LinkedListTest
             ///Assert
             Assert.AreEqual(3, size);
         }
+        /// <summary>
+        /// displays the elements in ascending order
+        /// </summary>
+        [TestMethod]
+        public void AddedElements_ShouldBeInAscendingOrder()
+        {
+            ///Arrange
+            SortedLinkedList list = new SortedLinkedList();
+            ///Act
+            list.AddElement(56);
+            list.AddElement(30);
+            list.AddElement(40);
+            list.AddElement(70);
+            ///Assert
+            Assert.AreEqual(30, list.head.data);
+        }
     }
 }

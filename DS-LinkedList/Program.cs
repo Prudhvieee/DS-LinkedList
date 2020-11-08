@@ -46,6 +46,12 @@ namespace DS_LinkedList
             linkedList.DeleteMiddleNode(40);
             linkedList.Display();
             linkedList.Size();
+            SortedLinkedList sortedLinkedList = new SortedLinkedList();
+            sortedLinkedList.AddElement(56);
+            sortedLinkedList.AddElement(30);
+            sortedLinkedList.AddElement(40);
+            sortedLinkedList.AddElement(70);
+            sortedLinkedList.Display();
         }
     }
 }
