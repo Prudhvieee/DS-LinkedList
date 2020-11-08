@@ -41,6 +41,11 @@ namespace DS_LinkedList
             Console.WriteLine("\nInserting data after particular position\n");
             linkedList.InsertNodeAfterParticularNode(40, 30);
             linkedList.Display();
+            //deleting middle node
+            linkedList.Size();
+            linkedList.DeleteMiddleNode(40);
+            linkedList.Display();
+            linkedList.Size();
         }
     }
 }

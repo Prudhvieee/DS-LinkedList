@@ -98,6 +98,23 @@ namespace DS_LinkedListTest
             ///Assert
             Assert.AreEqual(2, position);
         }
-
+        /// <summary>
+        /// Among the given numbers delete 40 should return the remaining.
+        /// </summary>
+        [TestMethod]
+        public void Delete40_ShouldReturn_RequiredResult()
+        {
+            ///Arrange
+            LinkedList list = new LinkedList();
+            ///Act
+            list.Add(56);
+            list.Add(30);
+            list.Add(70);
+            list.InsertNodeAfterParticularNode(40, 30);
+            list.DeleteMiddleNode(40);
+            int size = list.Size();
+            ///Assert
+            Assert.AreEqual(3, size);
+        }
     }
 }
