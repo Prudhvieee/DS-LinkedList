@@ -82,6 +82,22 @@ namespace DS_LinkedListTest
             ///Assert
             Assert.AreEqual(70, last.data);
         }
+        /// <summary>
+        /// Ability to rewturn the search position of the given number
+        /// </summary>
+        [TestMethod]
+        public void SearchNumber_ShouldReturn_Position()
+        {
+            ///Arrange
+            LinkedList list = new LinkedList();
+            ///Act
+            list.Append(56);
+            list.Append(30);
+            list.Append(70);
+            int position = list.Search(30);
+            ///Assert
+            Assert.AreEqual(2, position);
+        }
 
     }
 }

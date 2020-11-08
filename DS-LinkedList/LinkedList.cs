@@ -66,6 +66,13 @@ namespace DS_LinkedList
                 temp = temp.next;
             }
         }
+        /// <summary>
+        /// UC-4 
+        /// used to insert data at particular position
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public Node InsertAtParticularPosition(int position, int data)
         {
             if (position < 1)
@@ -99,6 +106,7 @@ namespace DS_LinkedList
             return head;
         }
         /// <summary>
+        /// UC-5
         /// Pop method deletes the first element in the linked list
         /// </summary>
         /// <returns></returns>
@@ -116,6 +124,7 @@ namespace DS_LinkedList
             return node;
         }
         /// <summary>
+        /// UC-6
         /// PopLast method is used to delete the last element
         /// </summary>
         /// <returns></returns>
@@ -137,6 +146,31 @@ namespace DS_LinkedList
                 newNode.next = null;
                 return removedNode;
             }
+        }
+        /// <summary>
+        /// UC-7
+        /// used to search data
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public int Search(int data)
+        {
+            int count = 1;
+            Node temp = head;
+            if (this.head == null)
+            {
+                return 0;
+            }
+            while (temp != null)
+            {
+                if (temp.data == data)
+                {
+                    return count; ;
+                }
+                temp = temp.next;
+                count++;
+            }
+            return 0;
         }
     }
 }
